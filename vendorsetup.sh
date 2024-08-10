@@ -34,20 +34,20 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
 	export ALLOW_MISSING_DEPENDENCIES=true
-	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+	#export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export TARGET_DEVICE_ALT="channel"
 	export OF_TARGET_DEVICES="channel"
-	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/bootdevice/by-name/system"
+	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/platform/bootdevice/by-name/vendor"
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1588606644"
 
 	# Screen Settings
-	export OF_SCREEN_H="2400"
-	export OF_STATUS_H="105"
-	export OF_STATUS_INDENT_LEFT="48"
-	export OF_STATUS_INDENT_RIGHT="48"
-	export OF_ALLOW_DISABLE_NAVBAR="0"
+	#export OF_SCREEN_H="2400"
+	#export OF_STATUS_H="105"
+	#export OF_STATUS_INDENT_LEFT="48"
+	#export OF_STATUS_INDENT_RIGHT="48"
+	#export OF_ALLOW_DISABLE_NAVBAR="0"
 
 	export OF_USE_MAGISKBOOT=1
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
@@ -63,8 +63,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
     
 	# R11.1 Setings
-	export FOX_BUILD_TYPE="Beta"
-	export OF_MAINTAINER="SquirrelPython"
+	export FOX_BUILD_TYPE="Unofficial"
+	export OF_MAINTAINER="Katakishi"
 	export FOX_VERSION="R11.1_3"
     
 	export FOX_ENABLE_APP_MANAGER=1
@@ -77,7 +77,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_R11=1
 	export OF_FLASHLIGHT_ENABLE=1
 	export FOX_DELETE_AROMAFM=1
-	export OF_PATCH_AVB20=1
+	#export OF_PATCH_AVB20=0
 	export OF_FBE_METADATA_MOUNT_IGNORE="1"
 	export OF_HIDE_NOTCH="1"
 	export FOX_REPLACE_BUSYBOX_PS="0"
