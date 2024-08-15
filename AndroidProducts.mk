@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_channel.mk
+    $(LOCAL_DIR)/omni_channel.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_channel-user \
-    twrp_channel-userdebug \
-    twrp_channel-eng
+    omni_channel-user \
+    omni_channel-userdebug \
+    omni_channel-eng
