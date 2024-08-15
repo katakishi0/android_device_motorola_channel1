@@ -21,9 +21,6 @@
 # Release name (automatically taken from this file's suffix)
 PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))
 
-# Custom vendor used in build tree (automatically taken from this file's prefix)
-CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
-
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/$(CUSTOM_VENDOR)/config/common.mk)
 
